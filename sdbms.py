@@ -347,9 +347,6 @@ class AddStudent(QDialog):
         self.setWindowTitle("Add Student Details")
         self.resize(500,300)
 
-    def Close(self):
-    	self.close("")
-     
     def reset(self):
         self.rollText.setText("")
         self.nameText.setText("")
