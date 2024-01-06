@@ -348,7 +348,7 @@ class AddStudent(QDialog):
         self.resize(500,300)
 
     def Close(self):
-    	self.close()
+    	self.close("")
      
     def reset(self):
         self.rollText.setText("")
@@ -453,14 +453,14 @@ class Window(QMainWindow):
         self.dialogDelete.exec()
     
     def showStudent(self):
-        if self.editField.text() is "":
+        if self.editField.text() == "":
             QMessageBox.warning(QMessageBox(), 'Error','You must give the roll number to show the results for.')
             return None
         showstudent = DBHelper()
         showstudent.searchStudent(int(self.editField.text()))
 
     def deleteRecord(self):
-        if self.editField.text() is "":
+        if self.editField.text() == "":
             QMessageBox.warning(QMessageBox(), 'Error','You must give the roll number to show the results for.')
             return None
         delrecord = DBHelper()
