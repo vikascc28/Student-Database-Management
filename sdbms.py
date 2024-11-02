@@ -348,7 +348,7 @@ class AddStudent(QDialog):
         self.resize(500,300)
 
     def Close(self):
-    	self.close("")
+        self.close("")
      
     def reset(self):
         self.rollText.setText("")
